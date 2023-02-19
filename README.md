@@ -24,11 +24,7 @@
  #### <span>The navbar is kind of fancy. I think, this is how it looks<span>
  ![this is how it looks the directory at the moment](./src/assets/img/readMeImgs/Screenshot_73.jpg)
  ## - <span style="color:#1ADF61">A short video</span>
-<<<<<<< HEAD
-
-=======
  
->>>>>>> 1b68d86af50e28b5b9b1d4c39e4360ff72a01b9a
  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rf5XkO35pGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
