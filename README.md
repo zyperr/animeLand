@@ -26,8 +26,10 @@
  ## - <span style="color:#1ADF61">A short video</span>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rf5XkO35pGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
 ### Thing to improve in the future
 <div style="text-align:left">
+
 
 - Change the dynamic html because I'm using innerHtml 😐
 - Add a filter for search
@@ -35,5 +37,11 @@
 - make a page for each anime
 - make a footer for the page
 - And add more features
+
+###  Technologies that I used
+
+- HTML
+- CSS
+- Javascript 
 <div>
 </div>
