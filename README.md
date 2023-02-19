@@ -26,7 +26,7 @@
  ## - <span style="color:#1ADF61">A short video</span>
 
 
-[![Alt text](https://img.youtube.com/vi/https://youtu.be/rf5XkO35pGo/0.jpg)](https://www.youtube.com/watch?v=https://youtu.be/rf5XkO35pGo)
+<a href="https://youtu.be/rf5XkO35pGo">link video</a>
 
 ### Thing to improve in the future
 <div style="text-align:left">
