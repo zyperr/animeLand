@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b8382c93be.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css"" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Anime Directory</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <div class="menu__icon-container">
+          <i class="fa-solid fa-bars icon" id="hambugerIcon"></i>
+        </div>
+        <div class="menu__search_container">
+          <form class="search-form">
+          <button class="menu__search-icon"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></button>
+            <input
+              type="search"
+              autocomplete="off"
+              placeholder="search anime"
+              id="search__input"
+            />
+          </form>
+        </div>
+      </div>
+      <nav class="navbar-container">
+        <ul class="navbar__list-links">
+          <a href="./directory.html" class="navbar__link">directory</a>
+          <a href="./index.html" class="navbar__link">Home</a>
+          <a href="#" class="navbar__link">Login</a>
+          <a href="#" class="navbar__link">Sign in</a>
+        </ul>
+      </nav>
+    </header>
+    <div class="bg-darked">
+      <main>
+        <div class="bg-darked"></div>
+        <section class="anime__cards-container">
+        </section>
+        <div id="errorMessage" class="content">
+          <h2 class="text-Error">Anime Not Found</h2>
+          <img src="https://64.media.tumblr.com/33e312abd35533afae4c99549cd50d89/a6ed89b9847a8348-0a/s640x960/b4f20d958902bec834311efaf4eb3b420ee6d2f1.png" alt="question mark because missing information" class="imgError">
+          <p class="error_Status">Error 404</p>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="./assets/directoy.js"></script>
+  </body>
+</html>

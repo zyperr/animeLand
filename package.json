@@ -1,0 +1,28 @@
+{
+  "name": "landing-page-anime",
+  "version": "1.0.0",
+  "description": "This landig page It's made with an anime api to reforce the knowledge that I learned at platzi more expecific in async course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyperr/landing-page-anime.git"
+  },
+  "keywords": [
+    "javascript",
+    "async",
+    "fetch"
+  ],
+  "author": "Maximiliano Vera ramerica200@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zyperr/landing-page-anime/issues"
+  },
+  "homepage": "https://github.com/zyperr/landing-page-anime#readme",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
+}
