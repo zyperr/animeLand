@@ -13,33 +13,40 @@ export const AnimeCard = () => {
     const data = await response.json();
     return data;
   }
-  (async () => {
+  const createAnimeCard = async () => {
     try {
       const animeInfo = await animeData(API);
-      let cardAnime = `${animeInfo.data
-        .map(
-          (anime, index) =>
-            ` 
-        <div class="anime__card staggered-enter" style="background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),url('${
-          anime.images.jpg.large_image_url
-        }');background-repeat: no-repeat;background-size: cover;animation-delay:${
-              index * 0.1
-            }s">
-            <span class="anime__card-likes">
-              <i class="fa-solid fa-star"></i>
-              ${anime.score ?? "no rating"}
-            </span>
-            <h5 class="anime__title">${anime.title}</h5>
-          </div>`
-        )
-        .join("")}`;
-      animeCardContainer.innerHTML += cardAnime;
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      animeCardContainer
-        .querySelectorAll(".staggered-enter")
-        .forEach((animation) =>
-          animation.classList.add("staggered-enter-active")
-        );
+      const infoCard = animeInfo.data.map((anime) => {
+        let animeScore = anime.score ?? "no rating";
+        let animeImg = anime.images.jpg.large_image_url;
+        let animeTitle = anime.title;
+
+        return { animeScore, animeImg, animeTitle };
+      });
+      for (const cardAnime of infoCard) {
+        const animeCard = document.createElement("div");
+        const spanScore = document.createElement("span");
+        const iconStar = document.createElement("i");
+        const animeTitle = document.createElement("h5");
+
+        spanScore.classList.add("anime__card-likes");
+        spanScore.textContent = cardAnime.animeScore;
+
+        animeTitle.classList.add("anime__title");
+        animeTitle.innerText = cardAnime.animeTitle;
+
+        animeCard.classList.add("anime__card");
+        animeCard.style.background = `linear-gradient(to bottom left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),url('${cardAnime.animeImg}')`;
+        animeCard.style.backgroundSize = "cover";
+        animeCard.style.backgroundRepeat = "no-repeat";
+
+        iconStar.setAttribute("class", "fa-solid fa-star");
+        spanScore.appendChild(iconStar);
+        animeCard.appendChild(spanScore);
+        animeCard.appendChild(animeTitle);
+
+        animeCardContainer.appendChild(animeCard);
+      }
 
       searchForm.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -60,36 +67,36 @@ export const AnimeCard = () => {
           .then((response) => response.json())
           .then((animes) => {
             let cardSearch = `${animes.data
-              .filter((item) => item.title == animeName || item.score > 0 && item.score != null)
+              .filter(
+                (item) =>
+                  item.title == animeName ||
+                  (item.score > 0 && item.score != null)
+              )
               .map(
-                (
-                  anime,
-                  index
-                ) => `<div class="anime__card" style="background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),url('${
-                  anime.images.jpg.large_image_url
-                }');background-repeat: no-repeat;background-size: cover;animation-delay:${
-                  index * 0.2
-                };"><span class="anime__card-likes"><i class="fa-solid fa-star"></i>${
-                  anime.score ?? "No rating"
-                }</span><h5 class="anime__title">${anime.title}</h5>
+                (anime, index) =>
+                  `<div class="anime__card" style="background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),url('${
+                    anime.images.jpg.large_image_url
+                  }');background-repeat: no-repeat;background-size: cover;animation-delay:${
+                    index * 0.2
+                  };">
+                  <span class="anime__card-likes"><i class="fa-solid fa-star"></i>${
+                    anime.score ?? "No rating"
+                  }</span><h5 class="anime__title">${anime.title}</h5>
                 </div>`
               )
               .join("")}`;
+              const cardAnimes = document.querySelectorAll('.anime__card')
             if (animeName != "") {
               errorMessage.classList.remove("show__errorMessage");
               animeCardContainer.innerHTML = cardSearch;
             } else {
               errorMessage.classList.remove("show__errorMessage");
-              animeCardContainer.innerHTML = cardAnime;
+              
               new Promise((resolve) => setTimeout(resolve, 100));
-              animeCardContainer
-                .querySelectorAll(".staggered-enter")
-                .forEach((animation) =>
-                  animation.classList.add("staggered-enter-active")
-                );
             }
-            if(animes.data.tile !== animeName && animes.data.length === 0){
-              errorMessage.classList.add("show__errorMessage")
+            if (animes.data.tile !== animeName && animes.data.length === 0) {
+              errorMessage.classList.add("show__errorMessage");
+              setTimeout(()=>location.reload(),4000)
             }
           })
           .catch((error) => console.log(error));
@@ -97,5 +104,18 @@ export const AnimeCard = () => {
     } catch (error) {
       console.error(error);
     }
-  })();
+  };
+
+  const hero = document.querySelector(".hero");
+  window.addEventListener("load", () => {
+    hero.classList.add("zoom-background");
+    hero.style.transform = "scale(1.9)";
+    hero.style.opacity = "0";
+
+    setTimeout(() => {
+      hero.style.width = "0%";
+      scrollTo(0, 0);
+    }, 2000);
+  });
+  setTimeout(createAnimeCard, 1500);
 };

@@ -8,17 +8,30 @@
       src="https://kit.fontawesome.com/b8382c93be.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./homePage.css"
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/homePage.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
     />
-    <title>Anime Search</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Animeland!</title>
   </head>
   <body>
+    <div id="pre-loading">
+      <div class="middle">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+      </div>
+    </div>
     <header>
       <div class="menu">
         <div class="menu__icon-container">
@@ -27,51 +40,103 @@
       </div>
       <nav class="navbar-container">
         <ul class="navbar__list-links">
-          <a href="./directory.html" class="navbar__link">directory</a>
-          <a href="./index.html" class="navbar__link">Home</a>
-          <a href="#" class="navbar__link">Login</a>
-          <a href="#" class="navbar__link">Sign in</a>
+          <li>
+            <a href="./directory.html" class="navbar__link">directory</a>
+          </li>
+          <li><a href="./index.html" class="navbar__link">Home</a></li>
+          <li><a href="#" class="navbar__link">Login</a></li>
+          <li><a href="#" class="navbar__link">Sign in</a></li>
         </ul>
       </nav>
     </header>
     <div class="bg-darked">
-    <main>
-      <div class="hero zoom-background"></div>
-      <section class="principal_hero">
-        <!-- <h1 class="hero__title">Welcome To Annime</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eos debitis maiores ipsam iste suscipit dolorum voluptatem, repellat ex tempora in itaque perspiciatis quasi cumque, ipsa quos ea corrupti officiis.</p>
-        <button class="hero__btn">Subcribe</button> -->
-      </section>
-      <section>
-      </section>
-    </main>
-    <div class="delimited__Section"></div>
+      <main>
+        <section class="principal_hero">
+          <article>
+            <div class="attachment-bg">
+              <div class="slider-trailers">
+                <div class="card-trailer"></div>
+              </div>
+              <div class="btn__container">
+                <button id="btn-prev">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button id="btn-next">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+            <h1
+              class="welcome__title"
+              data-aos="fade-up-right"
+              data-aos-duration="1500"
+            >
+              Welcome to AnimeLand!
+            </h1>
+            <p
+              class="welcome__paragrahp"
+              data-aos="fade-up-right"
+              data-aos-duration="1500"
+            >
+              Get ready to dive into the exciting world of anime. Whether you're
+              a die-hard fan or just getting started, we've got something for
+              everyone. From classic titles to the latest releases, you'll find
+              it all right here.
+            </p>
+            <h2 data-aos="fade-up-right" data-aos-duration="1500">
+              New launches
+            </h2>
+          </article>
+        </section>
+        <section>
+          <div
+            class="carrousel"
+            data-aos="fade-up-right"
+            data-aos-duration="1500"
+          >
+            <ul class="slider__container"><h4 class="synopsis__H4">Synopsis</h4></ul>
+          </div>
+        </section>
+        <section class="stream-anime__section">
+          <h2 data-aos="fade-up-right" data-aos-duration="1500">
+            Stream Your Favorite Anime
+          </h2>
+          <p data-aos="fade-up-right" data-aos-duration="1500">
+            Can't get enough of your favorite anime? With AnimeLand, you can
+            stream all your favorite titles in one place. From classic hits to
+            the latest releases, you'll never run out of content to watch. Plus,
+            with our easy-to-use interface, you can find the perfect title to
+            fit your mood in just a few clicks.
+          </p>
+          <a href="#" target="_blank">Sign in</a>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2023 animeLand!. All rights reserved.</p>
+        <p>
+          All anime data is retrieved from the
+          <a href="https://jikan.moe" target="_blank"> Jikan API.</a>
+        </p>
+        <span>
+          Contact me
+          <ul>
+            <li>
+              <a target="_blank" href="https://github.com/zyperr"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/maximiliano-vera-85571a248/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </span>
+      </footer>
     </div>
-    <script type="module"src="./assets/index.js"></script>
+    <script type="module" src="./assets/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
-
-<!-- <div class="card__img">
-  <div class="aboutUs">
-    <h1 class="aboutUs__title">Discover New Animes</h1>
-    <p class="aboutUs__paragraph">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi inventore quisquam doloremque ducimus minima assumenda.
-    </p>
-  </div>
-</div>
-<div class="card__img">
-  <div class="aboutUs">
-    <h1 class="aboutUs__title">Discover New Animes</h1>
-    <p class="aboutUs__paragraph">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi inventore quisquam doloremque ducimus minima assumenda.
-    </p>
-  </div>
-</div>
-<div class="card__img">
-  <div class="aboutUs">
-    <h1 class="aboutUs__title">Discover New Animes</h1>
-    <p class="aboutUs__paragraph">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi inventore quisquam doloremque ducimus minima assumenda.
-    </p>
-  </div>
-</div> -->

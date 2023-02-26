@@ -1,0 +1,467 @@
+
+main {
+  background: var(--bg-input);
+  display: flex;
+  flex-flow: column wrap;
+  text-overflow: clip;
+  word-break: break-all;
+}
+p{
+  word-break: keep-all;
+}
+
+main  p::first-letter{
+  color: var(--text-color);
+  font-family: var(--rubic-text-family);
+  text-align: center;
+}
+.principal_hero {
+  display: flex;
+  justify-content: start;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100vw;
+  margin-top: 3.125rem;
+  text-align: center;
+}
+
+.attachment-bg {
+  height: 50vh;
+  background-attachment: fixed;
+  min-height: 35rem;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.attachment-bg .card__video {
+  height: 15.625rem;
+  border: none;
+  object-fit: cover;
+  transform: translateX(-31.25rem);
+  transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: absolute;
+  left: 10px;
+  top: 10%;
+}
+.attachment-bg .card__video.slideTrailer {
+  transform: translateX(0rem);
+}
+
+.welcome__title,
+h2,h4 {
+  text-align: center;
+  text-transform: uppercase;
+  background-image: var(--linear-bg);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  font-size: 1.875rem;
+  margin: 0.9375rem 0;
+}
+.welcome__title{
+  font-size: 1.5625rem;
+}
+.welcome__paragrahp,
+p {
+  color: var(--search-text);
+  margin: 10px 10px;
+  padding-bottom: 20px;
+}
+
+.discover__anime-world {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.discover__anime-btn {
+  margin-bottom: 1.25rem;
+}
+.slider__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-top: 7px;
+}
+.carrousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.carrousel > .slide {
+  margin: 0;
+  padding: 0;
+}
+.slide {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: opacity 1s ease-in;
+  border: 10px outset var(--text-color-aquaGreen);
+  border-radius: 15px;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide > .animeFp {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 318px;
+}
+.btn__container {
+  margin: 10px;
+  position: absolute;
+  top: 60%;
+}
+.btn__container > button {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.btn__container > button:hover {
+  background: rgb(20, 20, 20);
+  border-radius: 3px;
+  color: var(--search-text);
+  width: min-content;
+}
+.box-anime-title {
+  background: var(--bg-input);
+  color: var(--search-text);
+  margin: 20px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 70%;
+  height: 100px;
+  width: 70%;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 15px;
+  transform: translateX(-31.25rem);
+  transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.box-anime-title.slideTrailer {
+  transform: translateX(0);
+}
+
+.slider-trailers .card-trailer {
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+
+.stream-anime__section {
+  flex-flow: column wrap;
+  display: flex;
+  margin: 20px;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+}
+.stream-anime__section a {
+  padding: 0.625rem 1.5625rem;
+  margin: 1.25rem;
+  background: var(--linear-bg);
+  color: var(--search-text);
+  text-decoration: none;
+  border-radius: 0.9375rem;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+.stream-anime__section a:hover,
+a:active {
+  transform: scale(1.2);
+  background: var(--text-color-aquaGreen);
+  color: var(--bg-darked);
+}
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .welcome__title {
+    word-break: keep-all;
+    margin: 10px 20px;
+  }
+  .stream-anime__section {
+    text-align: center;
+    
+  }
+  .stream-anime__section > h2 {
+    padding-top: 30px;
+    margin: 0;
+    word-break: keep-all;
+  }
+  .synopsis-anime{
+    display: none;
+  }
+  .span-name__anime{
+    display: none;
+  }
+  .span-name__anime{
+    display: none;
+  }
+  .synopsis__H4{
+    display: none;
+  }
+  .box-anime-title{
+    width: fit-content;
+    text-align: center;
+    height: fit-content;
+  }
+}
+@media screen and (min-width: 375px) {
+  .stream-anime__section > h2 {
+    padding-top: 30px;
+  }
+  .synopsis-anime{
+    display: none;
+  }
+  .box-anime-title {
+    height: fit-content;
+  }
+  .attachment-bg .card__video {
+    left: 40px;
+    top: 15%;
+  }
+  .synopsis-anime{
+    display: none;
+  }
+  .span-name__anime{
+    display: none;
+  }
+  .synopsis__H4{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 425px){
+  .attachment-bg .card__video {
+    left: 70px;
+  }
+  .synopsis-anime{
+    display: none;
+  }
+  .span-name__anime{
+    display: none;
+  }
+  .synopsis__H4{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 450px){
+  .attachment-bg .card__video {
+    left: 75px;
+  }
+  .btn__container{
+    top: 23.5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn__container > button{
+    margin: 0 10px;
+  }
+  .box-anime-title {
+    height: fit-content;
+    top: 40%;
+  }
+  .carrousel{
+    height: 30vh;
+  }
+  .synopsis-anime{
+    display: none;
+  }
+  .span-name__anime{
+    display: none;
+  }
+  .span-name__anime{
+    display: none;
+  }
+  .synopsis__H4{
+    display: none;
+  }
+  
+}
+@media screen and (min-width: 768px){
+  .attachment-bg{
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+  .attachment-bg{
+    background-position: center center;
+    height: 100vh;
+  }
+  .attachment-bg .card__video {
+    transform: translateX(-200%);
+    width: 600px;
+    height: 400px;
+    left: 85px;
+  }
+  .welcome__title{
+    font-size: 35px;
+  }
+  .welcome__paragrahp{
+    font-size: 25px;
+  }
+  .btn__container{
+    top: 95%;
+  }
+  .box-anime-title{
+    transform: translateX(-50rem);
+    top: 81%;
+    width: fit-content;
+  }
+  .carrousel{
+    height: 50vh;
+  }
+  .stream-anime__section h2{
+    font-size: 30px;
+  }
+  .stream-anime__section p{
+    font-size: 20px;
+  }
+  .slider__container .slide{
+    right: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide.active .synopsis-anime{
+    display: block;
+    position: absolute;
+    font-size: small;
+    left: 240px;
+    top: 0px;
+    width: 319px;
+    text-shadow:1px 1px 2px rgba(16, 204, 166, 0.5) ;
+    height: 319px; 
+    overflow: auto;
+    scroll-behavior: smooth;
+    transition: scroll 5s cubic-bezier(0.99, 0.99, 1, 1.01);
+  }
+  .span-name__anime{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    margin: 0px 5px;
+    padding: 10px;
+    background-color: var(--bg-input);
+    border-radius: 15px;
+    color: var(--search-text);
+    display: block;
+
+  }
+  .synopsis__H4{
+    display: block;
+    position: absolute;
+    top: -20px;
+    font-size: 20px;
+  }
+  .btn__container{
+    width: 100%;
+    display: flex;
+    top: 50%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .attachment-bg{
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+  .attachment-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .attachment-bg .card__video{
+    left: 21%;
+    display: flex;
+    align-items: center;
+  }
+  .box-anime-title{
+    transform: translateX(-1000px);
+    font-size: larger;
+    padding: 20px;
+  }
+  
+  .welcome__paragrahp{
+    text-align: center;
+    margin: 0px 30px;
+    text-overflow: clip;
+  }
+  .stream-anime__section p{
+    width: 50%;
+  }
+  footer{
+    display: block;
+  }
+  footer span{
+    margin: 0;
+  }
+  footer p {
+    padding: 10px;
+  }
+  footer ul{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+  }
+}
+@media screen and (min-width: 1260px){
+  .attachment-bg{
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+  .attachment-bg .card__video{
+    left: 28%;
+  }
+  .box-anime-title{
+    transform: translateX(-1500px);
+  }
+  .slider__container .slide{
+    right: 55%;
+  }
+  .slide.active .synopsis-anime{
+    font-size: medium;
+    left: 250px;
+  }
+  .span-name__anime{
+    left: 0;
+    bottom: 10px;
+
+  }
+  .synopsis__H4{
+    top: -20px;
+    left: 50%;
+  }
+}
