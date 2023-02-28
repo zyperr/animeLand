@@ -275,7 +275,16 @@ a:active {
 
 @media screen and (min-width: 425px){
   .attachment-bg .card__video {
-    left: 70px;
+    left: 4.375rem;
+  }
+  .box-anime-title{
+    top: 70%;
+  }
+  .carrousel{
+    height: 60vh;
+  }
+  .stream-anime__section h2{
+    font-size: 1.875rem;
   }
   .synopsis-anime{
     display: none;
@@ -322,6 +331,27 @@ a:active {
   }
   
 }
+@media screen and (min-width: 500px){
+  .box-anime-title{
+    top: 70%;
+  }
+  .attachment-bg .card__video{
+    left: 5rem;
+    top: 7.5rem;
+    width: 21.25rem;
+    height: 300px;
+  }
+  .btn__container{
+    top: 35%;
+  }
+  .carrousel {
+    height: 60vh;
+  }
+  .stream-anime__section h2 {
+    font-size: 1.5625rem;
+  }
+}
+
 @media screen and (min-width: 768px){
   .attachment-bg{
     background-repeat: repeat-x;
@@ -348,7 +378,7 @@ a:active {
   }
   .box-anime-title{
     transform: translateX(-50rem);
-    top: 81%;
+    top: 90%;
     width: fit-content;
   }
   .carrousel{
@@ -475,5 +505,19 @@ a:active {
   .synopsis__H4{
     top: -20px;
     left: 50%;
+  }
+}
+@media screen and (min-width: 1440px){
+  .attachment-bg .card__video{
+    left: 15%;
+    width: 1000px;
+    height: 600px;
+  }
+  .btn__container > button{
+    padding: 20px 30px;
+    font-size: 40px;
+  }
+  .box-anime-title{
+    transform: translateX(-1500px);
   }
 }

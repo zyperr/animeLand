@@ -37,15 +37,26 @@
         <div class="menu__icon-container">
           <i class="fa-solid fa-bars icon" id="hambugerIcon"></i>
         </div>
+        <div class="menu__search_container">
+          <form class="search-form">
+            <button class="menu__search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              type="search"
+              autocomplete="off"
+              placeholder="search anime"
+              id="search__input"
+            />
+          </form>
+        </div>
       </div>
       <nav class="navbar-container">
         <ul class="navbar__list-links">
-          <li>
-            <a href="./src/directory.html" class="navbar__link">directory</a>
-          </li>
-          <li><a href="./index.html" class="navbar__link">Home</a></li>
-          <li><a href="#" class="navbar__link">Login</a></li>
-          <li><a href="#" class="navbar__link">Sign in</a></li>
+          <a href="./src/directory.html" class="navbar__link">directory</a>
+          <a href="./index.html" class="navbar__link">Home</a>
+          <a href="#" class="navbar__link">Login</a>
+          <a href="#" class="navbar__link">Sign in</a>
         </ul>
       </nav>
     </header>
@@ -108,7 +119,7 @@
             with our easy-to-use interface, you can find the perfect title to
             fit your mood in just a few clicks.
           </p>
-          <a href="#" target="_blank">Sign in</a>
+          <a href="./src/directory.html" target="_blank">Let's start</a>
         </section>
       </main>
       <footer>

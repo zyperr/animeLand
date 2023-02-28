@@ -110,12 +110,16 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   flex-flow: column wrap;
 }
-
+.navbar__list-links{
+  margin: 0;
+  padding: 0;
+  gap: 0px;
+}
 .navbar__list-links .navbar__link {
   color: var(--text-color);
   text-decoration: none;
   text-transform: uppercase;
-  margin: .1875rem .625rem;
+  margin: 5px 10px;
 }
 .navbar__list-links .navbar__link:hover {
   color: var(--text-hover);
