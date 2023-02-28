@@ -344,6 +344,7 @@ a:active {
       height: 40vh;
     }
 }
+
 @media screen and (min-width: 450px){
   .attachment-bg .card__video {
     left: 50px;
@@ -371,7 +372,14 @@ a:active {
   }
   
 }
-
+@media (min-width: 451px) and (min-height: 953px ){
+  .box-anime-title{
+    top: 45%;
+  }
+  .carrousel{
+    height: 40vh;
+  }
+}
 @media screen and (min-width: 500px){
   .box-anime-title{
     top: 70%;
@@ -405,11 +413,7 @@ a:active {
     height: 50vh;
   }
 }
-@media screen and (min-width: 600px){
-  .box-anime-title{
-    top: 45%;
-  }
-}
+
 @media screen and (min-width: 717px){
   .attachment-bg .card__video {
     transform: translateX(-200%);
