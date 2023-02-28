@@ -21,14 +21,14 @@ main  p::first-letter{
   flex-flow: column nowrap;
   align-items: center;
   width: 100vw;
-  margin-top: 3.125rem;
+  margin-top: 50px;
   text-align: center;
 }
 
 .attachment-bg {
   height: 50vh;
   background-attachment: fixed;
-  min-height: 35rem;
+  min-height: 560px;
   width: 100%;
   background-size: cover;
   background-position: bottom center;
@@ -39,17 +39,17 @@ main  p::first-letter{
   align-items: center;
 }
 .attachment-bg .card__video {
-  height: 15.625rem;
+  height: 250px;
   border: none;
   object-fit: cover;
-  transform: translateX(-31.25rem);
+  transform: translateX(-500px);
   transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
   position: absolute;
-  left: 10px;
+  left: .625rem;
   top: 10%;
 }
 .attachment-bg .card__video.slideTrailer {
-  transform: translateX(0rem);
+  transform: translateX(0px);
 }
 
 .welcome__title,
@@ -64,17 +64,17 @@ h2,h4 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
-  font-size: 1.875rem;
-  margin: 0.9375rem 0;
+  font-size: 30px;
+  margin: 15px 0;
 }
 .welcome__title{
-  font-size: 1.5625rem;
+  font-size: 25px;
 }
 .welcome__paragrahp,
 p {
   color: var(--search-text);
-  margin: 10px 10px;
-  padding-bottom: 20px;
+  margin: .625rem .625rem;
+  padding-bottom: 1.25rem;
 }
 
 .discover__anime-world {
@@ -84,14 +84,14 @@ p {
   align-items: center;
 }
 .discover__anime-btn {
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 .slider__container {
   width: 100%;
   display: flex;
   justify-content: center;
   list-style: none;
-  padding-top: 7px;
+  padding-top: .4375rem;
 }
 .carrousel {
   position: relative;
@@ -101,7 +101,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  margin: .625rem 0;
 }
 
 .carrousel > .slide {
@@ -113,8 +113,8 @@ p {
   opacity: 0;
   top: 0;
   transition: opacity 1s ease-in;
-  border: 10px outset var(--text-color-aquaGreen);
-  border-radius: 15px;
+  border: .625rem outset var(--text-color-aquaGreen);
+  border-radius: .9375rem;
 }
 .slide.active {
   opacity: 1;
@@ -123,10 +123,10 @@ p {
   object-fit: cover;
   object-position: center;
   width: 100%;
-  height: 318px;
+  height: 19.875rem;
 }
 .btn__container {
-  margin: 10px;
+  margin: .625rem;
   position: absolute;
   top: 60%;
 }
@@ -134,30 +134,30 @@ p {
   background: rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.5);
   border: none;
-  font-size: 20px;
-  padding: 10px 20px;
-  margin: 0 20px;
+  font-size: 1.25rem;
+  padding: .625rem 1.25rem;
+  margin: 0 1.25rem;
   cursor: pointer;
 }
 .btn__container > button:hover {
   background: rgb(20, 20, 20);
-  border-radius: 3px;
+  border-radius: .1875rem;
   color: var(--search-text);
   width: min-content;
 }
 .box-anime-title {
   background: var(--bg-input);
   color: var(--search-text);
-  margin: 20px;
-  padding: 10px 20px;
+  margin: 1.25rem;
+  padding: .625rem 1.25rem;
   position: absolute;
   top: 70%;
-  height: 100px;
+  height: 6.25rem;
   width: 70%;
   text-align: center;
-  font-size: 15px;
-  border-radius: 15px;
-  transform: translateX(-31.25rem);
+  font-size: .9375rem;
+  border-radius: .9375rem;
+  transform: translateX(-500px);
   transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .box-anime-title.slideTrailer {
@@ -173,18 +173,18 @@ p {
 .stream-anime__section {
   flex-flow: column wrap;
   display: flex;
-  margin: 20px;
+  margin: 1.25rem;
   text-align:center;
   justify-content: center;
   align-items: center;
 }
 .stream-anime__section a {
-  padding: 0.625rem 1.5625rem;
-  margin: 1.25rem;
+  padding: 10px 25px;
+  margin: 20px;
   background: var(--linear-bg);
   color: var(--search-text);
   text-decoration: none;
-  border-radius: 0.9375rem;
+  border-radius: 15px;
   cursor: pointer;
   transform: scale(1);
   transition: transform 0.5s ease-in-out;
@@ -205,18 +205,22 @@ a:active {
     background-position: 200% center;
   }
 }
-@media screen and (max-width: 320px) {
 
+@media screen and (max-width: 320px) {
+  .attachment-bg .card__video{
+    left: 3%;
+    width: 300px;
+  }
   .welcome__title {
     word-break: keep-all;
-    margin: 10px 20px;
+    margin: .625rem 1.25rem;
   }
   .stream-anime__section {
     text-align: center;
     
   }
   .stream-anime__section > h2 {
-    padding-top: 30px;
+    padding-top: 1.875rem;
     margin: 0;
     word-break: keep-all;
   }
@@ -238,18 +242,39 @@ a:active {
     height: fit-content;
   }
 }
-@media screen and (min-width: 375px) {
+
+@media screen and (min-width: 22.5rem){
+  .box-anime-title{
+    top: 45%;
+    height: fit-content;
+    width: fit-content;
+  }
+  .stream-anime__section h2{
+    font-size: 1.5625rem;
+  }
+  .synopsis-anime{
+    display: none;
+  }
+  .span-name__anime{
+    display: none;
+  }
+  .synopsis__H4{
+    display: none;
+  }
+}
+@media screen and (min-width: 23.4375rem) {
   .stream-anime__section > h2 {
-    padding-top: 30px;
+    padding-top: 1.875rem;
   }
   .synopsis-anime{
     display: none;
   }
   .box-anime-title {
     height: fit-content;
+    top: 70%;
   }
   .attachment-bg .card__video {
-    left: 40px;
+    left: 2.5rem;
     top: 15%;
   }
   .synopsis-anime{
@@ -262,7 +287,7 @@ a:active {
     display: none;
   }
 }
-@media screen and (min-width: 390px){
+@media screen and (min-width: 24.375rem){
   .box-anime-title{
     top: 45%;
   }
@@ -271,14 +296,22 @@ a:active {
   }
 
   .stream-anime__section h2{
-    padding-top: 10px;
-    font-size: 28px;
+    padding-top: .625rem;
+    font-size: 1.75rem;
   }
 }
-
-@media screen and (min-width: 425px){
+@media screen and (min-width: 412px){
   .attachment-bg .card__video {
-    left: 4.375rem;
+    left: 10%;
+    width: 350px;
+  }
+  .box-anime-title{
+    top: 48%;
+  }
+}
+@media screen and (min-width: 26.5625rem){
+  .attachment-bg .card__video {
+    left: 70px;
   }
   .box-anime-title{
     top: 70%;
@@ -287,7 +320,7 @@ a:active {
     height: 60vh;
   }
   .stream-anime__section h2{
-    font-size: 1.875rem;
+    font-size: 30px;
   }
   .synopsis-anime{
     display: none;
@@ -300,9 +333,9 @@ a:active {
   }
 }
 
-@media screen and (min-width: 450px){
+@media screen and (min-width: 28.125rem){
   .attachment-bg .card__video {
-    left: 75px;
+    left: 4.6875rem;
   }
   .btn__container{
     top: 23.5%;
@@ -311,7 +344,7 @@ a:active {
     justify-content: space-between;
   }
   .btn__container > button{
-    margin: 0 10px;
+    margin: 0 .625rem;
   }
   .box-anime-title {
     height: fit-content;
@@ -334,15 +367,15 @@ a:active {
   }
   
 }
-@media screen and (min-width: 500px){
+@media screen and (min-width: 31.25rem){
   .box-anime-title{
     top: 70%;
   }
   .attachment-bg .card__video{
-    left: 5rem;
-    top: 7.5rem;
-    width: 21.25rem;
-    height: 300px;
+    left: 80px;
+    top: 120px;
+    width: 340px;
+    height: 18.75rem;
   }
   .btn__container{
     top: 35%;
@@ -351,47 +384,40 @@ a:active {
     height: 60vh;
   }
   .stream-anime__section h2 {
-    font-size: 1.5625rem;
-  }
-}
-
-@media screen and (min-width: 768px){
-  .attachment-bg{
-    background-repeat: repeat-x;
-    background-size: contain;
-  }
-  .attachment-bg{
-    background-position: center center;
-    height: 100vh;
-  }
-  .attachment-bg .card__video {
-    transform: translateX(-200%);
-    width: 600px;
-    height: 400px;
-    left: 85px;
-  }
-  .welcome__title{
-    font-size: 35px;
-  }
-  .welcome__paragrahp{
     font-size: 25px;
   }
-  .btn__container{
-    top: 95%;
+}
+@media screen and (min-width: 33.75rem){
+  .attachment-bg .card__video{
+    left: 18%;
   }
   .box-anime-title{
-    transform: translateX(-50rem);
-    top: 90%;
-    width: fit-content;
+    transform: translateX(-800px);
+    top: 65%;
+    height: max-content;
   }
-  .carrousel{
+  .carrousel {
     height: 50vh;
   }
-  .stream-anime__section h2{
-    font-size: 30px;
+}
+@media screen and (min-width: 717px){
+  .attachment-bg .card__video {
+    transform: translateX(-200%);
+    width: 550px;
+    height: 400px;
+    left: 5.3125rem;
+    top: 15%;
   }
-  .stream-anime__section p{
-    font-size: 20px;
+  .box-anime-title{
+    transform: translateX(-800px);
+    top: 95%;
+    width: fit-content;
+  }
+  .btn__container{
+    top: 50%;
+  }
+  .carrousel{
+    height: 60vh;
   }
   .slider__container .slide{
     right: 60%;
@@ -403,11 +429,11 @@ a:active {
     display: block;
     position: absolute;
     font-size: small;
-    left: 240px;
-    top: 0px;
-    width: 319px;
-    text-shadow:1px 1px 2px rgba(16, 204, 166, 0.5) ;
-    height: 319px; 
+    left: 15rem;
+    top: 0rem;
+    width: 19.9375rem;
+    text-shadow:.0625rem .0625rem .125rem rgba(16, 204, 166, 0.5) ;
+    height: 19.9375rem; 
     overflow: auto;
     scroll-behavior: smooth;
     transition: scroll 5s cubic-bezier(0.99, 0.99, 1, 1.01);
@@ -415,11 +441,11 @@ a:active {
   .span-name__anime{
     position: absolute;
     left: 0;
-    bottom: 10px;
-    margin: 0px 5px;
-    padding: 10px;
+    bottom: .625rem;
+    margin: 0rem .3125rem;
+    padding: .625rem;
     background-color: var(--bg-input);
-    border-radius: 15px;
+    border-radius: .9375rem;
     color: var(--search-text);
     display: block;
 
@@ -427,8 +453,8 @@ a:active {
   .synopsis__H4{
     display: block;
     position: absolute;
-    top: -20px;
-    font-size: 20px;
+    top: -1.25rem;
+    font-size: 1.25rem;
   }
   .btn__container{
     width: 100%;
@@ -437,32 +463,157 @@ a:active {
     justify-content: space-between;
   }
 }
-
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 48rem){
   .attachment-bg{
     background-repeat: repeat-x;
     background-size: contain;
   }
+  .attachment-bg{
+    background-position: center center;
+    height: 100vh;
+  }
+  .attachment-bg .card__video {
+    transform: translateX(-200%);
+    width: 37.5rem;
+    height: 25rem;
+    left: 5.3125rem;
+  }
+  .welcome__title{
+    font-size: 2.1875rem;
+  }
+  .welcome__paragrahp{
+    font-size: 1.5625rem;
+  }
+  .box-anime-title{
+    transform: translateX(-800px);
+    top: 90%;
+    width: fit-content;
+  }
+  .stream-anime__section h2{
+    font-size: 1.875rem;
+  }
+  .stream-anime__section p{
+    font-size: 1.25rem;
+  }
+
+}
+@media screen and (min-width: 57rem){
+  .attachment-bg .card__video{
+    left: 15%;
+  }
+}
+@media screen and (min-height: 64rem){
+  .attachment-bg .card__video {
+    top: 20%;
+    height: 31.25rem;
+  }
+  .box-anime-title{
+    font-size: 2.1875rem;
+    top: 80%;
+  }
+  .slide.active .synopsis-anime{
+    font-size: 1.5625rem;
+  }
+  .btn__container{
+    top: 42%;
+  }
+  .carrousel {
+    height: 35vh;
+  }
+  .btn__container > button{
+    font-size: 2.1875rem;
+  }
+  .stream-anime__section h2{
+    font-size: 2.1875rem;
+  }
+  .stream-anime__section p{
+    font: 20px;
+  }
+}
+@media screen and (min-width: 51.25rem){
+  .attachment-bg .card__video {
+    top: 20%;
+    height: 37.5rem;
+    width: 40.625rem;
+  }
+  .btn__container{
+    top: 43%;
+  }
+  .btn__container > button{
+    font-size: 2.5rem;
+  }
+  .box-anime-title{
+    top: 80%;
+    width: 60%;
+    height: fit-content;
+    font-size: 30px;
+  }
+  .carrousel{
+    height: 30vh;
+  }
+  .stream-anime__section h2{
+    font-size: 1.875rem;
+  }
+  .stream-anime__section p{
+    font-size: 1.25rem;
+  }
+  .slider__container .slide{
+    top: 10%;
+  }
+  .slide.active .synopsis-anime{
+    font-size: 1.25rem
+  }
+  .synopsis__H4{
+    top: 2%;
+    left: 50%;
+    font-size: 1.875rem;
+  }
+}
+@media  (min-width: 1024px) and (min-height: 600px)  {
+  .attachment-bg .card__video{
+    height: 400px;
+    left: 18%;
+  }
+  .box-anime-title{
+    top: 85%;
+    width: fit-content;
+    height: fit-content;
+    transform: translateX(-1200px);
+  }
+  .carrousel {
+    height: 60vh;
+  }
+}
+@media (min-width: 1024px) and (min-height: 785px){
   .attachment-bg {
+    background-repeat: repeat-x;
+    background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .attachment-bg .card__video{
-    left: 21%;
+    left: 11%;
+    top: 10%;
+    width: 50rem;
+    height: 500px;
     display: flex;
     align-items: center;
   }
   .box-anime-title{
-    transform: translateX(-1000px);
+    transform: translateX(-68.75rem);
     font-size: larger;
-    padding: 20px;
+    padding: 1.25rem;
+    top: 76%;
   }
   
   .welcome__paragrahp{
     text-align: center;
-    margin: 0px 30px;
+    margin: 0rem 1.875rem;
     text-overflow: clip;
+  }
+  .carrousel{
+    height: 50vh;
   }
   .stream-anime__section p{
     width: 50%;
@@ -474,7 +625,7 @@ a:active {
     margin: 0;
   }
   footer p {
-    padding: 10px;
+    padding: .625rem;
   }
   footer ul{
     display: flex;
@@ -482,45 +633,63 @@ a:active {
     flex-flow: row;
   }
 }
-@media screen and (min-width: 1260px){
+@media screen and (min-width: 1100px){
   .attachment-bg{
     background-repeat: repeat-x;
     background-size: contain;
   }
   .attachment-bg .card__video{
-    left: 28%;
+    left: 13%;
+    width: 900px;
+    height: 400px;
+    top:15%;
   }
   .box-anime-title{
-    transform: translateX(-1500px);
+    transform: translateX(-93.75rem);
+    font-size: 20px;
+    width: 50%;
   }
   .slider__container .slide{
     right: 55%;
   }
   .slide.active .synopsis-anime{
     font-size: medium;
-    left: 250px;
+    left: 15.625rem;
   }
   .span-name__anime{
     left: 0;
-    bottom: 10px;
+    bottom: .625rem;
 
   }
   .synopsis__H4{
-    top: -20px;
+    top: -1.25rem;
     left: 50%;
   }
 }
-@media screen and (min-width: 1440px){
+@media (min-width: 1280px) and (min-height: 800px) {
   .attachment-bg .card__video{
     left: 15%;
-    width: 1000px;
+    width: 900px;
     height: 600px;
   }
+  .box-anime-title{
+    top: 85%;
+  }
+}
+@media screen and (min-width: 90rem){
+  .attachment-bg .card__video{
+    left: 15%;
+    width: 62.5rem;
+    height: 43.75rem;
+  }
   .btn__container > button{
-    padding: 20px 30px;
-    font-size: 40px;
+    padding: 1.25rem 1.875rem;
+    font-size: 2.5rem;
   }
   .box-anime-title{
-    transform: translateX(-1500px);
+    transform: translateX(-93.75rem);
+  }
+  .slide.active .synopsis-anime{
+    font-size: 1.25rem;
   }
 }
