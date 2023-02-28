@@ -196,7 +196,9 @@ a:active {
   background: var(--text-color-aquaGreen);
   color: var(--bg-darked);
 }
-
+.menu__search_container{
+  display: none;
+}
 
 @keyframes textclip {
   to {
@@ -204,6 +206,7 @@ a:active {
   }
 }
 @media screen and (max-width: 320px) {
+
   .welcome__title {
     word-break: keep-all;
     margin: 10px 20px;
