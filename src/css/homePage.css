@@ -405,7 +405,11 @@ a:active {
     height: 50vh;
   }
 }
-
+@media screen and (min-width: 600px){
+  .box-anime-title{
+    top: 45%;
+  }
+}
 @media screen and (min-width: 717px){
   .attachment-bg .card__video {
     transform: translateX(-200%);
@@ -678,7 +682,7 @@ a:active {
     height: 600px;
   }
   .box-anime-title{
-    top: 85%;
+    top: 90%;
   }
 }
 @media screen and (min-width: 1440px){
