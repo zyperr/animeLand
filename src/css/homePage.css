@@ -206,7 +206,7 @@ a:active {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media (max-width: 320px){
   .attachment-bg .card__video{
     left: 3%;
     width: 300px;
@@ -372,12 +372,15 @@ a:active {
   }
   
 }
-@media (min-width: 431px) and (min-height: 953px ){
+@media (min-width:451px) and (min-height:802px){
   .box-anime-title{
-    top: 45%;
+    top: 50%;
   }
   .carrousel{
     height: 40vh;
+  }
+  .btn__container{
+    top: 65%;
   }
 }
 @media screen and (min-width: 500px){
