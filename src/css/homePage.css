@@ -259,7 +259,19 @@ a:active {
     display: none;
   }
 }
+@media screen and (min-width: 390px){
+  .box-anime-title{
+    top: 45%;
+  }
+  .carrousel{
+    height:40vh;
+  }
 
+  .stream-anime__section h2{
+    padding-top: 10px;
+    font-size: 28px;
+  }
+}
 
 @media screen and (min-width: 425px){
   .attachment-bg .card__video {

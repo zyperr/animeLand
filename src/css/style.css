@@ -24,7 +24,9 @@
 ul {
   list-style: none;
 }
-
+header{
+  height: 0;
+}
 * {
   padding: 0;
   margin: 0;
@@ -109,13 +111,13 @@ body::-webkit-scrollbar-thumb{
   flex-flow: column wrap;
 }
 .navbar-container .navbar__list-links {
-  gap: 0.625rem;
+  gap: .3125rem;
 }
 .navbar__list-links .navbar__link {
   color: var(--text-color);
   text-decoration: none;
   text-transform: uppercase;
-  margin: 0.625rem 0.9375rem;
+  margin: .1875rem .625rem;
 }
 .navbar__list-links .navbar__link:hover {
   color: var(--text-hover);
@@ -352,5 +354,15 @@ a:active {
   100% {
     transform: scaleY(0.1);
     background: var(--text-color);
+  }
+}
+@media screen and (min-width: 390px){
+  .menu{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+  }
+  .anime__cards-container{
+    margin-top: 1.875rem;
   }
 }
