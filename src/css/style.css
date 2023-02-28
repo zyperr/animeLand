@@ -110,9 +110,7 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   flex-flow: column wrap;
 }
-.navbar-container .navbar__list-links {
-  gap: .3125rem;
-}
+
 .navbar__list-links .navbar__link {
   color: var(--text-color);
   text-decoration: none;
