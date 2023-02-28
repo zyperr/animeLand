@@ -243,9 +243,12 @@ a:active {
   }
 }
 
-@media screen and (min-width: 22.5rem){
+@media screen and (min-width: 360px){
+  .attachment-bg .card__video{
+    left: 8%;
+  }
   .box-anime-title{
-    top: 45%;
+    top: 75%;
     height: fit-content;
     width: fit-content;
   }
@@ -262,7 +265,8 @@ a:active {
     display: none;
   }
 }
-@media screen and (min-width: 23.4375rem) {
+
+@media screen and (min-width: 375px) {
   .stream-anime__section > h2 {
     padding-top: 1.875rem;
   }
@@ -287,7 +291,7 @@ a:active {
     display: none;
   }
 }
-@media screen and (min-width: 24.375rem){
+@media screen and (min-width: 390px){
   .box-anime-title{
     top: 45%;
   }
@@ -309,9 +313,9 @@ a:active {
     top: 48%;
   }
 }
-@media screen and (min-width: 26.5625rem){
+@media screen and (min-width: 425px){
   .attachment-bg .card__video {
-    left: 70px;
+    left: 40px;
   }
   .box-anime-title{
     top: 70%;
@@ -332,23 +336,23 @@ a:active {
     display: none;
   }
 }
-
-@media screen and (min-width: 28.125rem){
+@media (min-width: 426px) and (min-height: 854px) {
+    .box-anime-title{
+      top: 45%;
+    }
+    .carrousel{
+      height: 40vh;
+    }
+}
+@media screen and (min-width: 450px){
   .attachment-bg .card__video {
-    left: 4.6875rem;
+    left: 50px;
   }
   .btn__container{
-    top: 23.5%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .btn__container > button{
-    margin: 0 .625rem;
-  }
-  .box-anime-title {
-    height: fit-content;
     top: 40%;
+  }
+  .box-anime-title{
+    top: 45%;
   }
   .carrousel{
     height: 30vh;
@@ -367,7 +371,8 @@ a:active {
   }
   
 }
-@media screen and (min-width: 31.25rem){
+
+@media screen and (min-width: 500px){
   .box-anime-title{
     top: 70%;
   }
@@ -387,7 +392,7 @@ a:active {
     font-size: 25px;
   }
 }
-@media screen and (min-width: 33.75rem){
+@media screen and (min-width: 540px){
   .attachment-bg .card__video{
     left: 18%;
   }
@@ -400,6 +405,7 @@ a:active {
     height: 50vh;
   }
 }
+
 @media screen and (min-width: 717px){
   .attachment-bg .card__video {
     transform: translateX(-200%);
@@ -463,19 +469,18 @@ a:active {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 48rem){
-  .attachment-bg{
-    background-repeat: repeat-x;
-    background-size: contain;
-  }
+
+@media screen and (min-width: 768px){
   .attachment-bg{
     background-position: center center;
     height: 100vh;
+    background-repeat: repeat-x;
+    background-size: contain;
   }
   .attachment-bg .card__video {
     transform: translateX(-200%);
     width: 37.5rem;
-    height: 25rem;
+    height: 450px;
     left: 5.3125rem;
   }
   .welcome__title{
@@ -497,12 +502,12 @@ a:active {
   }
 
 }
-@media screen and (min-width: 57rem){
+@media screen and (min-width: 912px){
   .attachment-bg .card__video{
     left: 15%;
   }
 }
-@media screen and (min-height: 64rem){
+@media (min-width: 768px) and (min-height: 1024px){
   .attachment-bg .card__video {
     top: 20%;
     height: 31.25rem;
@@ -530,7 +535,7 @@ a:active {
     font: 20px;
   }
 }
-@media screen and (min-width: 51.25rem){
+@media screen and (min-width: 820px){
   .attachment-bg .card__video {
     top: 20%;
     height: 37.5rem;
@@ -676,7 +681,7 @@ a:active {
     top: 85%;
   }
 }
-@media screen and (min-width: 90rem){
+@media screen and (min-width: 1440px){
   .attachment-bg .card__video{
     left: 15%;
     width: 62.5rem;
