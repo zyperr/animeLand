@@ -44,11 +44,7 @@
 
 
 - ~~Change the dynamic html because I'm using innerHtml~~ 😐 <span style="color:green">(done)</span>
-- Add a filter for search
-- Add a pagination
-- make a page for each anime
 - ~~make a footer for the page~~ <span style="color:green">(done)</span>
-- And add more features
 - ~~make landing page~~ <span style="color:green">(done)</span>
 - ~~make a loader~~ <span style="color:green">(done)</span>
 ###  Technologies that I used
